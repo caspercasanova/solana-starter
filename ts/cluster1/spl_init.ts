@@ -12,8 +12,17 @@ const connection = new Connection("https://api.devnet.solana.com", commitment);
 (async () => {
     try {
         // Start here
-        // const mint = ???
+        const mint = await createMint(connection, keypair, keypair.publicKey, null, 6);
+
+        console.log("Mint", mint.toBase58());
+
     } catch(error) {
         console.log(`Oops, something went wrong: ${error}`)
     }
 })()
+
+/* 
+
+Dw39XiER88M9NB8HUHm5X5i5chrMSekHBodQehd7Bsmk
+
+*/
